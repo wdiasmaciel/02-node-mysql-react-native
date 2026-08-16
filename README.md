@@ -468,6 +468,18 @@ Abra o arquivo `package.json` na raiz do seu projeto e ajuste o campo `"scripts"
 
 ---
 
+## Iniciando o Banco de Dados:
+
+Inicie o MySQL, executando o comando abaixo:
+
+```bash
+npm run db:start
+```
+
+*(Pressione a tecla `<ENTER>` mais uma vez se o log do `MySQL` cobrir o seu terminal para liberar a linha de comando)*.
+
+---
+
 ## Iniciando o Servidor
 
 Inicie o arquivo principal do sistema, executando o comando abaixo:
