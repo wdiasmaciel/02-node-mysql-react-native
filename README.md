@@ -501,10 +501,10 @@ Conectado ao MySQL com sucesso!
 
 ## Exercício
 
-1. A partir do exemplo desta prática, crie as rotas para as tabelas cliente e pedido.
+1. A partir do exemplo desta prática, altere o servidor Node.js, incluindo as rotas para as tabelas cliente e pedido.
 
 2. Crie o servidor Node.js com rotas para todas as tabelas da loja que vende equipamento de informática. O banco de dados deve ter as tabelas: cliente, produto e pedido.
 
-3. Crie o servidor Node.js com rotas para todas as tabelas dp site de viagens. O banco de dados deve ter as tabelas: cliente, destino turístico e pacote de viagem.
+3. Crie o servidor Node.js com rotas para todas as tabelas do site de viagens. O banco de dados deve ter as tabelas: cliente, destino turístico e pacote de viagem.
 
 4. Crie o servidor Node.js com rotas para todas as tabelas do sistema de controle de estoque de produtos em todas as filiais de uma empresa.
