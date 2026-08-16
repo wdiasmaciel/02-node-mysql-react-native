@@ -290,7 +290,7 @@ Content-Type: application/json
 
 {
   "titulo": "Dominando Node.js Moderno",
-  "autor": "Professor Dias",
+  "autor": "Ana Silva",
   "preco": 59.90,
   "estoque": 10
 }
@@ -303,7 +303,7 @@ Content-Type: application/json
 
 {
   "titulo": "Introdução ao SQL (Edição Revisada)",
-  "autor": "Luke Code",
+  "autor": "Lúcio Code",
   "preco": 54.90,
   "estoque": 12
 }
