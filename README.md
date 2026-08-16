@@ -289,7 +289,7 @@ Content-Type: application/json
 
 {
   "titulo": "Dominando Node.js Moderno",
-  "autor": "Ana Silva",
+  "autor": "Joana Pereira",
   "preco": 59.90,
   "estoque": 10
 }
