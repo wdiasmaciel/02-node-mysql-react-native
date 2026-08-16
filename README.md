@@ -375,7 +375,9 @@ export default function removerLivro(req, res) {
 
 ## Coleção JSON de testes para o Thunder Client
 
-Na raiz do projeto no Codespaces, crie um arquivo chamado `thunder-collection_livraria.json`.Cole o conteúdo de código abaixo dentro dele e salve o arquivo.
+Na raiz do projeto no Codespaces, crie um arquivo chamado `thunder-collection_livraria.json`.
+
+Cole o conteúdo de código abaixo dentro dele e salve o arquivo.
 
 ```json
 {
