@@ -285,7 +285,7 @@ export default function buscarLivroPorId(req, res) {
       return res.status(404).json({ msg_erro: `Nenhum livro encontrado com ID ${id}.` });
   
     return res.json(resultado[0]);
-  }
+  });
 }
 ```
 ---
