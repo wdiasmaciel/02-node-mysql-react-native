@@ -325,8 +325,6 @@ Abra o arquivo `package.json` na raiz do seu projeto e ajuste o campo `"scripts"
   "description": "meu aplicativo",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "bd:start": "sudo mkdir -p /var/run/mysqld && sudo chown mysql:mysql /var/run/mysqld && sudo /usr/sbin/mysqld --user=mysql &",
     "dev": "node --watch server.js",
     "start": "node server.js"
   },
@@ -406,7 +404,7 @@ Para entrar no console interativo agora que tem senha, use:
 sudo mysql -u root -p
 ```
 
-O terminal vai pedir a senha de forma protegida. Digite root, tecle `<Enter>`. Com isso, o script init.sql será executado.
+O terminal vai pedir a senha de forma protegida. Digite `root`, tecle `<Enter>`. Com isso, o script init.sql será executado.
 
 ---
 
@@ -465,18 +463,6 @@ SELECT * FROM pedido;
 O banco `livraria_db` com as tabelas de cliente, livro e pedido aparecerá na barra lateral esquerda.
 
 ![Tela do Database Client.](./figuras/database-client.png)
-
----
-
-## Iniciando o Banco de Dados:
-
-Inicie o MySQL, executando o comando abaixo:
-
-```bash
-npm run bd:start
-```
-
-*(Pressione a tecla `<ENTER>` mais uma vez se o log do `MySQL` cobrir o seu terminal para liberar a linha de comando)*.
 
 ---
 
