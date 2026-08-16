@@ -1,0 +1,40 @@
+http
+
+### 1. LISTAR TODOS OS LIVROS (GET)
+GET http://localhost:3000/livros
+
+###
+
+### 2. BUSCAR LIVRO POR ID (GET COM ID)
+GET http://localhost:3000/livros/1
+
+###
+
+### 3. CADASTRAR NOVO LIVRO (POST)
+POST http://localhost:3000/livros
+Content-Type: application/json
+
+{
+  "titulo": "Dominando Node.js Moderno",
+  "autor": "Professor Dias",
+  "preco": 59.90,
+  "estoque": 10
+}
+
+###
+
+### 4. ATUALIZAR LIVRO POR ID (PUT)
+PUT http://localhost:3000/livros/1
+Content-Type: application/json
+
+{
+  "titulo": "Introdução ao SQL (Edição Revisada)",
+  "autor": "Luke Code",
+  "preco": 54.90,
+  "estoque": 12
+}
+
+###
+
+### 5. DELETAR LIVRO POR ID (DELETE)
+DELETE http://localhost:3000/livros/3
