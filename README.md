@@ -253,7 +253,7 @@ export default function removerLivro(req, res) {
     if (erro) 
       return res.status(500).json({ msg_erro: erro.message });
 
-    if (result.affectedRows === 0) 
+    if (resultado.affectedRows === 0) 
       return res.status(404).json({ mensagem: 'Livro não encontrado!' });
 
     res.json({ mensagem: 'Livro e seus pedidos removidos com sucesso!' });
