@@ -426,21 +426,15 @@ DELETE http://localhost:3000/livros/3
 
 ---
 
-## Importar Coleção no Thunder Client
+## Usando o REST Client
 
-1. Na barra lateral esquerda do VS Code, clique no ícone do raio azul (Thunder Client).
+1. Abrir o arquivo `api.http`.
 
-2. Clique na aba Collections (Coleções).
+2. A extensão `REST Client` vai gerar automaticamente um texto clicável azul escrito `Send Request` logo acima de cada comando (GET, POST, PUT, DELETE).
 
-3. No topo do menu de Collections, clique no botão de menu (três traços ou três pontos).
+3. Clique em "Send Request".
 
-4. Escolha a opção Import.
-
-5. Selecione o arquivo `thunder-collection_livraria.json` na pasta do projeto.
-
-6. Uma pasta chamada Livraria API (MySQL) aparecerá com as 5 requisições salvas em ordem sequencial. 
-
-7. Abra cada uma e clique no botão azul `Send` no topo direito para ver as respostas estruturadas em JSON.
+4. Uma nova aba se abrirá à direita, mostrando a resposta.
 
 ---
 
