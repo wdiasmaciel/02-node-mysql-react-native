@@ -25,7 +25,7 @@ Adicionar a extensão `Postcode` (para teste de API) do `VS Code` diretamente no
     "vscode": {
       "extensions": [
         "cweijan.vscode-mysql-client2",
-        "mkloubert.vscode-postcode"
+        "rohinivsenthil.postcode"
       ]
     }
   },

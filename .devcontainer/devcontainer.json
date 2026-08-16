@@ -5,7 +5,7 @@
     "vscode": {
       "extensions": [
         "cweijan.vscode-mysql-client2",
-        "mkloubert.vscode-postcode"
+        "rohinivsenthil.postcode"
       ]
     }
   },
