@@ -62,118 +62,6 @@ mysql --version
 
 ---
 
-## Inicializando o Servidor MySQL no Terminal
-
-No terminal do VS Code, execute os seguintes comandos:
-
-1. **Crie e dê permissão para as pastas do sistema:**
-
-```bash
-sudo mkdir -p /var/run/mysqld && sudo chown mysql:mysql /var/run/mysqld
-```
-
-2. **Inicie o servidor MySQL em segundo plano:**
-
-```bash
-sudo /usr/sbin/mysqld --user=mysql &
-```
-
-*(Após dar Enter, algumas linhas de log vão aparecer. **Aperte a tecla ENTER mais uma vez** para liberar a linha de comando).*
-
-3. **Defina a senha do usuário Root para a extensão:**
-
-Conecte no terminal administrativo:
-
-```bash
-sudo mysql --protocol=socket -u root
-```
-
-Dentro do prompt `mysql>`, cole o comando abaixo e tecle `<Enter>`:
-
-```sql
-ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'root';
-FLUSH PRIVILEGES;
-EXIT;
-```
-
-4. **Importe o script de dados inicial:**
-
-```bash
-sudo mysql -u root -proot < init.sql
-```
-
-*(Lembre-se de deixar o -proot tudo junto. Se colocar espaço entre o -p e o root, o MySQL vai achar que root é o nome de um banco de dados e vai dar erro).*
-
-5. **Entrar no console com senha:**
-
-Para entrar no console interativo agora que tem senha, use:
-
-```bash
-sudo mysql -u root -p
-```
-
-O terminal vai pedir a senha de forma protegida. Digite root, tecle `<Enter>`. Com isso, o script init.sql será executado.
-
----
-
-## Verificando os Dados da Tabela de Clientes
-
-No prompt `mysql>` informe:
-
-```sql
-USE livraria_db;
-```
-
-```sql
-SELECT * FROM cliente;
-```
-
-![Tabela de Clientes.](./figuras/tabela-cliente.png)
-
----
-
-## Verificando os Dados da Tabela de Livros
-
-No prompt `mysql>` informe:
-
-```sql
-SELECT * FROM livro;
-```
-
-![Tabela de Livros.](./figuras/tabela-livro.png)
-
----
-
-## Verificando os Dados da Tabela de Pedidos
-
-No prompt `mysql>` informe:
-
-```sql
-SELECT * FROM pedido;
-```
-
-![Tabela de Pedidos.](./figuras/tabela-pedido.png)
-
----
-
-## Configurando a Extensão "Database Client"
-
-1. Na barra lateral esquerda do VS Code, clique no ícone de **Banco de Dados** (tomada/cilindros).
-2. Clique no botão **`+`** (Create Connection).
-3. Escolha o tipo de banco: **MySQL**.
-4. Preencha os campos exatamente assim:
-   - **Host:** `localhost`
-   - **Username:** `root`
-   - **Password:** `root`
-   - **Database:** `livraria_db` *(ou deixe em branco)*
-5. Clique no botão **Connect**.
-
-O banco `livraria_db` com as tabelas de cliente, livro e pedido aparecerá na barra lateral esquerda.
-
-![Tela do Database Client.](./figuras/database-client.png)
-
----
-
 ## Estrutura do Projeto
 
 Na raiz do projeto, crie a estrutura de arquivos e diretórios abaixo:
@@ -465,6 +353,118 @@ Abra o arquivo `package.json` na raiz do seu projeto e ajuste o campo `"scripts"
   }
 }
 ```
+
+---
+
+## Inicializando o Servidor MySQL no Terminal
+
+No terminal do VS Code, execute os seguintes comandos:
+
+1. **Crie e dê permissão para as pastas do sistema:**
+
+```bash
+sudo mkdir -p /var/run/mysqld && sudo chown mysql:mysql /var/run/mysqld
+```
+
+2. **Inicie o servidor MySQL em segundo plano:**
+
+```bash
+sudo /usr/sbin/mysqld --user=mysql &
+```
+
+*(Após dar Enter, algumas linhas de log vão aparecer. **Aperte a tecla ENTER mais uma vez** para liberar a linha de comando).*
+
+3. **Defina a senha do usuário Root para a extensão:**
+
+Conecte no terminal administrativo:
+
+```bash
+sudo mysql --protocol=socket -u root
+```
+
+Dentro do prompt `mysql>`, cole o comando abaixo e tecle `<Enter>`:
+
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'root';
+FLUSH PRIVILEGES;
+EXIT;
+```
+
+4. **Importe o script de dados inicial:**
+
+```bash
+sudo mysql -u root -proot < init.sql
+```
+
+*(Lembre-se de deixar o -proot tudo junto. Se colocar espaço entre o -p e o root, o MySQL vai achar que root é o nome de um banco de dados e vai dar erro).*
+
+5. **Entrar no console com senha:**
+
+Para entrar no console interativo agora que tem senha, use:
+
+```bash
+sudo mysql -u root -p
+```
+
+O terminal vai pedir a senha de forma protegida. Digite root, tecle `<Enter>`. Com isso, o script init.sql será executado.
+
+---
+
+## Verificando os Dados da Tabela de Clientes
+
+No prompt `mysql>` informe:
+
+```sql
+USE livraria_db;
+```
+
+```sql
+SELECT * FROM cliente;
+```
+
+![Tabela de Clientes.](./figuras/tabela-cliente.png)
+
+---
+
+## Verificando os Dados da Tabela de Livros
+
+No prompt `mysql>` informe:
+
+```sql
+SELECT * FROM livro;
+```
+
+![Tabela de Livros.](./figuras/tabela-livro.png)
+
+---
+
+## Verificando os Dados da Tabela de Pedidos
+
+No prompt `mysql>` informe:
+
+```sql
+SELECT * FROM pedido;
+```
+
+![Tabela de Pedidos.](./figuras/tabela-pedido.png)
+
+---
+
+## Configurando a Extensão "Database Client"
+
+1. Na barra lateral esquerda do VS Code, clique no ícone de **Banco de Dados** (tomada/cilindros).
+2. Clique no botão **`+`** (Create Connection).
+3. Escolha o tipo de banco: **MySQL**.
+4. Preencha os campos exatamente assim:
+   - **Host:** `localhost`
+   - **Username:** `root`
+   - **Password:** `root`
+   - **Database:** `livraria_db` *(ou deixe em branco)*
+5. Clique no botão **Connect**.
+
+O banco `livraria_db` com as tabelas de cliente, livro e pedido aparecerá na barra lateral esquerda.
+
+![Tela do Database Client.](./figuras/database-client.png)
 
 ---
 
