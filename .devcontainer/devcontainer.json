@@ -4,7 +4,8 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "cweijan.vscode-mysql-client2"
+        "cweijan.vscode-mysql-client2",
+        "rangav.vscode-thunder-client"
       ]
     }
   },
