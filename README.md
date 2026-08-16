@@ -428,7 +428,7 @@ DELETE http://localhost:3000/livros/3
 
 ## Configuração no Arquivo package.json
 
-Abra o arquivo `package.json` na raiz do seu projeto e ajuste o campo `"scripts"`, para incluir os comando apresentados abaixo *(lembre-se de manter a chave "type": "module")*:
+Abra o arquivo `package.json` na raiz do seu projeto e ajuste o campo `"scripts"`, para incluir os comandos apresentados abaixo *(lembre-se de manter a chave "type": "module")*:
 
 ```bash
 {
@@ -438,6 +438,7 @@ Abra o arquivo `package.json` na raiz do seu projeto e ajuste o campo `"scripts"
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "bd:start": "sudo mkdir -p /var/run/mysqld && sudo chown mysql:mysql /var/run/mysqld && sudo /usr/sbin/mysqld --user=mysql &",
     "dev": "node --watch server.js",
     "start": "node server.js"
   },
