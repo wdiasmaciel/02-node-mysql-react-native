@@ -186,7 +186,7 @@ Na raiz do projeto, crie a estrutura de arquivos e diretórios abaixo:
 │   ├── atualizarLivro.js (PUT)
 │   └── deletarLivro.js   (DELETE)
 └── server.js             (Arquivo principal que junta tudo)
-```bash
+```
 
 ## Exercício
 
