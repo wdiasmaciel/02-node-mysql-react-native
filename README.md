@@ -426,6 +426,47 @@ DELETE http://localhost:3000/livros/3
 
 ---
 
+## Configuração no Arquivo package.json
+
+Abra o arquivo `package.json` na raiz do seu projeto e ajuste o campo `"scripts"`, para incluir os comando apresentados abaixo *(lembre-se de manter a chave "type": "module")*:
+
+```bash
+{
+  "name": "meu-app",
+  "version": "1.0.0",
+  "description": "meu aplicativo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdiasmaciel/01-node-mysql-react-native-bd.git"
+  },
+  "keywords": [
+    "Node.js",
+    "MySQL",
+    "React-Native"
+  ],
+  "author": "Wesley",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/wdiasmaciel/01-node-mysql-react-native-bd/issues"
+  },
+  "homepage": "https://github.com/wdiasmaciel/01-node-mysql-react-native-bd#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mysql2": "^3.23.3"
+  }
+}
+```
+
+---
+
 ## Iniciando o Servidor
 
 Inicie o arquivo principal do sistema, executando o comando abaixo:
