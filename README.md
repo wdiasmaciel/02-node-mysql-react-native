@@ -165,7 +165,7 @@ export default function buscarLivroPorId(req, res) {
 
   const query = 'SELECT id, titulo, autor, preco, estoque FROM livro WHERE id = ?';
 
-  db.query(query, [id], (erro, resultado) => {
+  bd.query(query, [id], (erro, resultado) => {
     if (erro) 
       return res.status(500).json({ msg_erro: erro.message });
 
