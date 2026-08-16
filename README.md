@@ -473,7 +473,7 @@ Abra o arquivo `package.json` na raiz do seu projeto e ajuste o campo `"scripts"
 Inicie o MySQL, executando o comando abaixo:
 
 ```bash
-npm run db:start
+npm run bd:start
 ```
 
 *(Pressione a tecla `<ENTER>` mais uma vez se o log do `MySQL` cobrir o seu terminal para liberar a linha de comando)*.
