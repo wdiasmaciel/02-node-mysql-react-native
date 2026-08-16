@@ -373,6 +373,86 @@ export default function removerLivro(req, res) {
 
 ---
 
+## Coleção JSON de testes para o Thunder Client
+
+Na raiz do projeto no Codespaces, crie um arquivo chamado `thunder-collection_livraria.json`.Cole o conteúdo de código abaixo dentro dele e salve o arquivo.
+
+```json
+{
+  "clientName": "Thunder Client",
+  "collectionName": "Livraria API (MySQL)",
+  "collectionId": "col_livraria_01",
+  "dateExported": "2026-08-16T00:00:00.000Z",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "name": "1. Listar Todos os Livros (GET)",
+      "url": "http://localhost:3000/livros",
+      "method": "GET",
+      "sortNum": 10000,
+      "createdBlank": false
+    },
+    {
+      "name": "2. Buscar Livro por ID (GET com ID)",
+      "url": "http://localhost:3000/livros/1",
+      "method": "GET",
+      "sortNum": 20000,
+      "createdBlank": false
+    },
+    {
+      "name": "3. Cadastrar Novo Livro (POST)",
+      "url": "http://localhost:3000/livros",
+      "method": "POST",
+      "sortNum": 30000,
+      "createdBlank": false,
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"titulo\": \"Dominando Node.js Moderno\",\n  \"autor\": \"Professor Dias\",\n  \"preco\": 59.90,\n  \"estoque\": 10\n}"
+      }
+    },
+    {
+      "name": "4. Atualizar Livro por ID (PUT)",
+      "url": "http://localhost:3000/livros/1",
+      "method": "PUT",
+      "sortNum": 40000,
+      "createdBlank": false,
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"titulo\": \"Introdução ao SQL (Edição Revisada)\",\n  \"autor\": \"Luke Code\",\n  \"preco\": 54.90,\n  \"estoque\": 12\n}"
+      }
+    },
+    {
+      "name": "5. Deletar Livro por ID (DELETE)",
+      "url": "http://localhost:3000/livros/3",
+      "method": "DELETE",
+      "sortNum": 50000,
+      "createdBlank": false
+    }
+  ]
+}
+```
+
+---
+
+## Importar Coleção no Thunder Client
+
+1. Na barra lateral esquerda do VS Code, clique no ícone do raio azul (Thunder Client).
+
+2. Clique na aba Collections (Coleções).
+
+3. No topo do menu de Collections, clique no botão de menu (três tracinhos ou três pontos).
+
+4. Escolha a opção Import.
+
+5. Selecione o arquivo `thunder-collection_livraria.json` na pasta do projeto.
+
+6. Uma pasta chamada Livraria API (MySQL) aparecerá com as 5 requisições salvas em ordem sequencial. 
+
+7. Abra cada uma e clique no botão azul `Send` no topo direito para ver as respostas estruturadas em JSON.
+
+---
+
 ## Exercício
 
 A partir do exemplo desta prática, em novo repositório, crie um banco de dados para:
