@@ -498,6 +498,10 @@ Conectado ao MySQL com sucesso!
 
 **OBS**: os testes tornam-se documentação oficial do repositório.
 
+Também observe os resultados no navegador:
+
+![Resultado no navegador.](./figuras/resultado-navegador.png)
+
 ---
 
 ## Exercício
