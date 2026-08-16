@@ -188,6 +188,78 @@ Na raiz do projeto, crie a estrutura de arquivos e diretórios abaixo:
 └── server.js             (Arquivo principal que agrupa tudo)
 ```
 
+---
+
+## Conexão com o Banco de Dados (bd.js)
+
+Este arquivo centraliza a conexão com o banco de dados. Assim, não precisamos repetir a senha e o host em todas as rotas.
+
+```javascript
+import mysql from 'mysql2';
+
+const bd = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'root',
+    database: 'livraria_db'
+});
+
+bd.connect(err => {
+    if (err) console.error('Erro no MySQL:', err);
+    else console.log('Conectado ao MySQL com sucesso!');
+});
+
+export default bd;
+```
+
+---
+
+## Rota GET (rotas/listarLivros.js)
+
+Permite a leitura dos livros cadastrados no banco de dados.
+
+```javascript
+import db from '../db.js';
+
+export default function listarLivros(req, res) {
+    db.query('SELECT * FROM livros', (err, results) => {
+        if (err) return res.status(500).json({ error: err.message });
+        res.json(results);
+    });
+}
+
+
+
+---
+
+## 
+
+
+
+---
+
+## 
+
+
+
+---
+
+## 
+
+
+
+---
+
+## 
+
+
+
+---
+
+## 
+
+
+
 ## Exercício
 
 A partir do exemplo desta prática, em novo repositório, crie um banco de dados para:
