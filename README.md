@@ -174,6 +174,20 @@ O banco `livraria_db` com as tabelas de cliente, livro e pedido aparecerá na ba
 
 ---
 
+## Estrutura do Projeto
+
+Na raiz do projeto, crie a estrutura de arquivos e diretórios abaixo:
+
+```bash
+├── db.js                 (Arquivo de conexão com o banco)
+├── rotas/
+│   ├── listarLivros.js   (GET)
+│   ├── cadastrarLivro.js (POST)
+│   ├── atualizarLivro.js (PUT)
+│   └── deletarLivro.js   (DELETE)
+└── server.js             (Arquivo principal que junta tudo)
+```bash
+
 ## Exercício
 
 A partir do exemplo desta prática, em novo repositório, crie um banco de dados para:
