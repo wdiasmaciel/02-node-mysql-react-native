@@ -443,7 +443,7 @@ Cole o conteúdo de código abaixo dentro dele e salve o arquivo.
 
 2. Clique na aba Collections (Coleções).
 
-3. No topo do menu de Collections, clique no botão de menu (três tracinhos ou três pontos).
+3. No topo do menu de Collections, clique no botão de menu (três traços ou três pontos).
 
 4. Escolha a opção Import.
 
