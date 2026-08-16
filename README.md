@@ -38,7 +38,7 @@ Adicionar a extensão `Thunder Client` (plugin para teste de API) do `VS Code` d
 
 ## Rebuild
 
-No `VS Code` do `Codespaces`, digite `CTRL + SHIFT + P`. Na barra de pesquisa digite `rebuild`. Selecione a opção `Codespaces: Rebuild Container`. Clique no botão `Rebuild`. Aguarde o término do processamento.
+No `VS Code` do `Codespaces`, digite `CTRL + SHIFT + P`. Na barra de pesquisa, digite `rebuild`. Selecione a opção `Codespaces: Rebuild Container`. Clique no botão `Rebuild`. Aguarde o término do processamento.
 
 ---
 
