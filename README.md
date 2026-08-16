@@ -258,7 +258,7 @@ export default function listarLivros(req, res) {
     if (erro) 
       return res.status(500).json({ msg_erro: erro.message });
     
-    res.status(200).json(resultado);
+    res.json(resultado);
   });
 }
 ```
@@ -284,7 +284,7 @@ export default function buscarLivroPorId(req, res) {
     if (resultado.length === 0) 
       return res.status(404).json({ msg_erro: `Nenhum livro encontrado com ID ${id}.` });
   
-    return res.status(200).json(resultado[0]);
+    return res.json(resultado[0]);
   }
 }
 ```
