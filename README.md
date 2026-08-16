@@ -15,7 +15,7 @@ Nós vamos utilizar o **GitHub Codespaces** para realizar as nossas práticas. I
 
 ## Configurar o Ambiente: incluir extensão Postcode
 
-Adicionar a extensão `Postcode` (para teste de API) do `VS Code` diretamente no container do `Codespace`, usando um arquivo de configuração `.devcontainer/devcontainer.json`, como apresentado abaixo:
+Adicionar a extensão `REST Client` (para teste de API) do `VS Code` diretamente no container do `Codespace`, usando um arquivo de configuração `.devcontainer/devcontainer.json`, como apresentado abaixo:
 
 ```json
 {
@@ -25,7 +25,7 @@ Adicionar a extensão `Postcode` (para teste de API) do `VS Code` diretamente no
     "vscode": {
       "extensions": [
         "cweijan.vscode-mysql-client2",
-        "rohinivsenthil.postcode"
+        "humao.rest-client"
       ]
     }
   },
