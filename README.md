@@ -426,6 +426,16 @@ DELETE http://localhost:3000/livros/3
 
 ---
 
+## Iniciando o Servidor
+
+Inicie o arquivo principal do sistema, executando o comando abaixo:
+
+```bash
+node server.js
+```
+
+---
+
 ## Usando o REST Client
 
 1. Abrir o arquivo `api.http`.
