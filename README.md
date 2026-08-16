@@ -436,6 +436,7 @@ DELETE http://localhost:3000/livros/3
 
 4. Uma nova aba se abrirá à direita, mostrando a resposta.
 
+**OBS**: os testes tornam-se documentação oficial do repositório.
 ---
 
 ## Exercício
