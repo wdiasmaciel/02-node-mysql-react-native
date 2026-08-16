@@ -190,6 +190,37 @@ Na raiz do projeto, crie a estrutura de arquivos e diretórios abaixo:
 
 ---
 
+## Arquivo Principal do Servidor (server.js)
+
+O arquivo do servidor importa as funções criadas e gerencia os endpoints.
+
+```javascript
+import express from 'express';
+import cors from 'cors';
+
+// Importando os módulos de rotas (Atenção ao .js no final do caminho!)
+import listarLivros from './rotas/listarLivros.js';
+import cadastrarLivro from './rotas/cadastrarLivro.js';
+import atualizarLivro from './rotas/atualizarLivro.js';
+import removerLivro from './rotas/removerLivro.js';
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Associando cada rota ao seu respectivo endpoint e método HTTP
+app.get('/livros', listarLivros);
+app.post('/livros', cadastrarLivro);
+app.put('/livros/:id', atualizarLivro);
+app.delete('/livros/:id', removerLivro);
+
+app.listen(3000, () => {
+  console.log('API (CRUD) ativa na porta 3000.');
+});
+```
+
+---
+
 ## Conexão com o Banco de Dados (bd.js)
 
 Este arquivo centraliza a conexão com o banco de dados. Assim, não precisamos repetir a senha e o host em todas as rotas.
@@ -315,41 +346,6 @@ export default function removerLivro(req, res) {
 ``` 
 
 ---
-
-## Arquivo Principal do Servidor (server.js)
-
-O arquivo do servidor importa as funções criadas e gerencia os endpoints.
-
-```javascript
-import express from 'express';
-import cors from 'cors';
-
-// Importando os módulos de rotas (Atenção ao .js no final do caminho!)
-import listarLivros from './rotas/listarLivros.js';
-import cadastrarLivro from './rotas/cadastrarLivro.js';
-import atualizarLivro from './rotas/atualizarLivro.js';
-import removerLivro from './rotas/removerLivro.js';
-
-const app = express();
-app.use(cors());
-app.use(express.json());
-
-// Associando cada rota ao seu respectivo endpoint e método HTTP
-app.get('/livros', listarLivros);
-app.post('/livros', cadastrarLivro);
-app.put('/livros/:id', atualizarLivro);
-app.delete('/livros/:id', removerLivro);
-
-app.listen(3000, () => {
-  console.log('API (CRUD) ativa na porta 3000.');
-});
-```
-
----
-
-## 
-
-
 
 ## Exercício
 
