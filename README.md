@@ -179,13 +179,14 @@ O banco `livraria_db` com as tabelas de cliente, livro e pedido aparecerá na ba
 Na raiz do projeto, crie a estrutura de arquivos e diretórios abaixo:
 
 ```bash
-├── server.js             (Arquivo principal que agrupa tudo. Ponto de entrada, inicia o servidor)
-├── db.js                 (Arquivo de conexão com o banco de dados MySQL)
-└── rotas/                (Pasta com as regras de negócio)
-    ├── listarLivros.js   (GET: apenas o comando SELECT)
-    ├── cadastrarLivro.js (POST: apenas o comando INSERT)
-    ├── atualizarLivro.js (PUT: apenas o comando UPDATE)
-    └── deletarLivro.js   (DELETE: apenas o comando DELETE)
+├── server.js               (Arquivo principal que agrupa tudo. Ponto de entrada, inicia o servidor)
+├── db.js                   (Arquivo de conexão com o banco de dados MySQL)
+└── rotas/                  (Pasta com as regras de negócio)
+    ├── listarLivros.js     (GET: apenas o comando SELECT)
+    ├── buscarLivroPorId.js (GET por ID: apenas o comando SELECT)
+    ├── cadastrarLivro.js   (POST: apenas o comando INSERT)
+    ├── atualizarLivro.js   (PUT: apenas o comando UPDATE)
+    └── deletarLivro.js     (DELETE: apenas o comando DELETE)
 ```
 
 ---
@@ -257,11 +258,36 @@ export default function listarLivros(req, res) {
     if (erro) 
       return res.status(500).json({ msg_erro: erro.message });
     
-    res.json(resultado);
+    res.status(200).json(resultado);
   });
 }
 ```
 
+---
+
+## Rota GET por ID (rotas/buscarLivroPorId.js)
+
+Permite a busca de um livro cadastrados no banco de dados a partir de seu ID.
+
+```javascript
+import bd from '../bd.js';
+
+export default function buscarLivroPorId(req, res) {
+  const { id } = req.params;
+
+  const query = 'SELECT id, titulo, autor, preco, estoque FROM livro WHERE id = ?';
+
+  db.query(query, [id], (erro, resultado) => {
+    if (erro) 
+      return res.status(500).json({ msg_erro: erro.message });
+
+    if (resultado.length === 0) 
+      return res.status(404).json({ msg_erro: `Nenhum livro encontrado com ID ${id}.` });
+  
+    return res.status(200).json(resultado[0]);
+  }
+}
+```
 ---
 
 ## Rota POST (rotas/cadastrarLivro.js)
