@@ -494,6 +494,8 @@ Conectado ao MySQL com sucesso!
 
 4. Uma nova aba se abrirá à direita, mostrando a resposta.
 
+![Resultado do REST Client.](./figuras/rest-client.png)
+
 **OBS**: os testes tornam-se documentação oficial do repositório.
 
 ---
