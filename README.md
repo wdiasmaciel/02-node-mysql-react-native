@@ -271,8 +271,7 @@ Na raiz do projeto no Codespaces, crie um arquivo chamado `api.http`.
 
 Cole o conteúdo de código abaixo dentro dele.
 
-```bash
-http
+```http
 
 ### 1. LISTAR TODOS OS LIVROS (GET)
 GET http://localhost:3000/livros
