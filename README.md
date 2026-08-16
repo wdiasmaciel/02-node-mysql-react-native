@@ -472,7 +472,7 @@ Abra o arquivo `package.json` na raiz do seu projeto e ajuste o campo `"scripts"
 Inicie o arquivo principal do sistema, executando o comando abaixo:
 
 ```bash
-node server.js
+npm run dev
 ```
 
 ---
