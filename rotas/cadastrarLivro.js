@@ -8,7 +8,7 @@ export default function cadastrarLivro(req, res) {
   
   const query = 'INSERT INTO livro (titulo, autor, preco, estoque) VALUES (?, ?, ?, ?)';
 
-  db.query(query, [titulo, autor, preco, estoque], (erro, resultado) => {
+  bd.query(query, [titulo, autor, preco, estoque], (erro, resultado) => {
     if (erro) 
       return res.status(500).json({ msg_erro: erro.message });
 

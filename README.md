@@ -193,7 +193,7 @@ export default function cadastrarLivro(req, res) {
   
   const query = 'INSERT INTO livro (titulo, autor, preco, estoque) VALUES (?, ?, ?, ?)';
 
-  db.query(query, [titulo, autor, preco, estoque], (erro, resultado) => {
+  bd.query(query, [titulo, autor, preco, estoque], (erro, resultado) => {
     if (erro) 
       return res.status(500).json({ msg_erro: erro.message });
 
@@ -221,7 +221,7 @@ export default function atualizarLivro(req, res) {
     
   const query = 'UPDATE livro SET titulo = ?, autor = ?, preco = ?, estoque = ? WHERE id = ?';
 
-  db.query(query, [titulo, autor, preco, estoque, id], (erro, resultado) => {
+  bd.query(query, [titulo, autor, preco, estoque, id], (erro, resultado) => {
     if (erro) 
       return res.status(500).json({ msg_erro: erro.message });
 
@@ -247,7 +247,7 @@ export default function removerLivro(req, res) {
 
   const query = 'DELETE FROM livro WHERE id = ?';
 
-  db.query(query, [id], (erro, resultado) => {
+  bd.query(query, [id], (erro, resultado) => {
     if (erro) 
       return res.status(500).json({ msg_erro: erro.message });
 

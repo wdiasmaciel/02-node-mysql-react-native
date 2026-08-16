@@ -10,7 +10,7 @@ export default function atualizarLivro(req, res) {
     
   const query = 'UPDATE livro SET titulo = ?, autor = ?, preco = ?, estoque = ? WHERE id = ?';
 
-  db.query(query, [titulo, autor, preco, estoque, id], (erro, resultado) => {
+  bd.query(query, [titulo, autor, preco, estoque, id], (erro, resultado) => {
     if (erro) 
       return res.status(500).json({ msg_erro: erro.message });
 

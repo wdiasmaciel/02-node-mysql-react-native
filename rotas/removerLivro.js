@@ -5,7 +5,7 @@ export default function removerLivro(req, res) {
 
   const query = 'DELETE FROM livro WHERE id = ?';
 
-  db.query(query, [id], (erro, resultado) => {
+  bd.query(query, [id], (erro, resultado) => {
     if (erro) 
       return res.status(500).json({ msg_erro: erro.message });
 
