@@ -302,7 +302,7 @@ Content-Type: application/json
 
 {
   "titulo": "Introdução ao SQL (Edição Revisada)",
-  "autor": "Lúcio Code",
+  "autor": "Mauro Souza",
   "preco": 54.90,
   "estoque": 12
 }
