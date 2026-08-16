@@ -13,9 +13,9 @@ Nós vamos utilizar o **GitHub Codespaces** para realizar as nossas práticas. I
 
 ---
 
-## Configurar o Ambiente: instalar o Node, o MySQL e o React Native
+## Configurar o Ambiente: incluir extensão Postcode
 
-Adicionar a extensão `Thunder Client` (plugin para teste de API) do `VS Code` diretamente no container do `Codespace`, usando um arquivo de configuração `.devcontainer/devcontainer.json`, como apresentado abaixo:
+Adicionar a extensão `Postcode` (para teste de API) do `VS Code` diretamente no container do `Codespace`, usando um arquivo de configuração `.devcontainer/devcontainer.json`, como apresentado abaixo:
 
 ```json
 {
@@ -25,7 +25,7 @@ Adicionar a extensão `Thunder Client` (plugin para teste de API) do `VS Code` d
     "vscode": {
       "extensions": [
         "cweijan.vscode-mysql-client2",
-        "rangav.vscode-thunder-client"
+        "mkloubert.vscode-postcode"
       ]
     }
   },
