@@ -179,8 +179,8 @@ O banco `livraria_db` com as tabelas de cliente, livro e pedido aparecerá na ba
 Na raiz do projeto, crie a estrutura de arquivos e diretórios abaixo:
 
 ```bash
-├── db.js                 (Arquivo de conexão com o banco de dados MySQL)
 ├── server.js             (Arquivo principal que agrupa tudo. Ponto de entrada, inicia o servidor)
+├── db.js                 (Arquivo de conexão com o banco de dados MySQL)
 └── rotas/                (Pasta com as regras de negócio)
     ├── listarLivros.js   (GET: apenas o comando SELECT)
     ├── cadastrarLivro.js (POST: apenas o comando INSERT)
