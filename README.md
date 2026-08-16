@@ -219,20 +219,42 @@ export default bd;
 Permite a leitura dos livros cadastrados no banco de dados.
 
 ```javascript
-import db from '../db.js';
+import bd from '../bd.js';
 
 export default function listarLivros(req, res) {
-    db.query('SELECT * FROM livros', (err, results) => {
-        if (err) return res.status(500).json({ error: err.message });
-        res.json(results);
-    });
+  bd.query('SELECT * FROM livro', (erro, resultado) => {
+    if (erro) 
+      return res.status(500).json({ msg_erro: erro.message });
+    
+    res.json(resultado);
+  });
 }
-
-
+```
 
 ---
 
-## 
+## Rota POST (rotas/cadastrarLivro.js)
+
+Permite o cadastro de livros no banco de dados.
+
+```javascript
+import bd from '../bd.js';
+
+export default function cadastrarLivro(req, res) {
+  const { titulo, autor, preco, estoque } = req.body;
+
+  if (!titulo || !autor || !preco || estoque === undefined) 
+    return res.status(400).json({ msg_erro: 'Todos os campos são obrigatórios!' });
+  
+  const query = 'INSERT INTO livro (titulo, autor, preco, estoque) VALUES (?, ?, ?, ?)';
+
+  db.query(query, [titulo, autor, preco, estoque], (erro, resultado) => {
+    if (erro) 
+      return res.status(500).json({ msg_erro: erro.message });
+
+    res.status(201).json({ id: resultado.insertId, titulo, autor, preco, estoque });
+  });
+}
 
 
 
