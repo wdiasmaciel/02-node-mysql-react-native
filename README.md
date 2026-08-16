@@ -508,4 +508,4 @@ Conectado ao MySQL com sucesso!
 
 3. Crie o servidor Node.js com rotas para todas as tabelas do site de viagens. O banco de dados deve ter as tabelas: cliente, destino turístico e pacote de viagem.
 
-4. Crie o servidor Node.js com rotas para todas as tabelas do sistema de controle de estoque de produtos em todas as filiais de uma empresa.
+4. Crie o servidor Node.js com rotas para todas as tabelas do sistema de controle de estoque de produtos nas filiais de uma empresa.
