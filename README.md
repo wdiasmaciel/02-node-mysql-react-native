@@ -476,6 +476,13 @@ Inicie o arquivo principal do sistema, executando o comando abaixo:
 npm run dev
 ```
 
+O console exibirá:
+
+```bash
+API (CRUD) ativa na porta 3000.
+Conectado ao MySQL com sucesso!
+```
+
 ---
 
 ## Usando o REST Client
@@ -494,10 +501,10 @@ npm run dev
 
 ## Exercício
 
-A partir do exemplo desta prática, em novo repositório, crie um banco de dados para:
+1. A partir do exemplo desta prática, crie as rotas para as tabelas cliente e pedido.
 
-1. Uma loja que vende equipamento de informática. O banco de dados deve ter as tabelas: cliente, produto e pedido.
+2. Crie o servidor Node.js com rotas para todas as tabelas da loja que vende equipamento de informática. O banco de dados deve ter as tabelas: cliente, produto e pedido.
 
-2. Um site de viagens. O banco de dados deve ter as tabelas: cliente, destino turístico e pacote de viagem.
+3. Crie o servidor Node.js com rotas para todas as tabelas dp site de viagens. O banco de dados deve ter as tabelas: cliente, destino turístico e pacote de viagem.
 
-3. Gerenciar o estoque de produtos de uma empresa em cada uma de suas filiais.
+4. Crie o servidor Node.js com rotas para todas as tabelas do sistema de controle de estoque de produtos em todas as filiais de uma empresa.
