@@ -373,66 +373,54 @@ export default function removerLivro(req, res) {
 
 ---
 
-## Coleção JSON de testes para o Thunder Client
+## Arquivo de Testes para o REST Client (api.http)
 
-Na raiz do projeto no Codespaces, crie um arquivo chamado `thunder-collection_livraria.json`.
+O REST Client lê arquivos de texto com a extensão .http.
 
-Cole o conteúdo de código abaixo dentro dele e salve o arquivo.
+Na raiz do projeto no Codespaces, crie um arquivo chamado `api.http`.
 
-```json
+Cole o conteúdo de código abaixo dentro dele.
+
+```bash
+http
+### 1. LISTAR TODOS OS LIVROS (GET)
+GET http://localhost:3000/livros
+
+###
+
+### 2. BUSCAR LIVRO POR ID (GET COM ID)
+GET http://localhost:3000/livros/1
+
+###
+
+### 3. CADASTRAR NOVO LIVRO (POST)
+POST http://localhost:3000/livros
+Content-Type: application/json
+
 {
-  "clientName": "Thunder Client",
-  "collectionName": "Livraria API (MySQL)",
-  "collectionId": "col_livraria_01",
-  "dateExported": "2026-08-16T00:00:00.000Z",
-  "version": "1.1",
-  "folders": [],
-  "requests": [
-    {
-      "name": "1. Listar Todos os Livros (GET)",
-      "url": "http://localhost:3000/livros",
-      "method": "GET",
-      "sortNum": 10000,
-      "createdBlank": false
-    },
-    {
-      "name": "2. Buscar Livro por ID (GET com ID)",
-      "url": "http://localhost:3000/livros/1",
-      "method": "GET",
-      "sortNum": 20000,
-      "createdBlank": false
-    },
-    {
-      "name": "3. Cadastrar Novo Livro (POST)",
-      "url": "http://localhost:3000/livros",
-      "method": "POST",
-      "sortNum": 30000,
-      "createdBlank": false,
-      "body": {
-        "type": "json",
-        "raw": "{\n  \"titulo\": \"Dominando Node.js Moderno\",\n  \"autor\": \"Professor Dias\",\n  \"preco\": 59.90,\n  \"estoque\": 10\n}"
-      }
-    },
-    {
-      "name": "4. Atualizar Livro por ID (PUT)",
-      "url": "http://localhost:3000/livros/1",
-      "method": "PUT",
-      "sortNum": 40000,
-      "createdBlank": false,
-      "body": {
-        "type": "json",
-        "raw": "{\n  \"titulo\": \"Introdução ao SQL (Edição Revisada)\",\n  \"autor\": \"Luke Code\",\n  \"preco\": 54.90,\n  \"estoque\": 12\n}"
-      }
-    },
-    {
-      "name": "5. Deletar Livro por ID (DELETE)",
-      "url": "http://localhost:3000/livros/3",
-      "method": "DELETE",
-      "sortNum": 50000,
-      "createdBlank": false
-    }
-  ]
+  "titulo": "Dominando Node.js Moderno",
+  "autor": "Professor Dias",
+  "preco": 59.90,
+  "estoque": 10
 }
+
+###
+
+### 4. ATUALIZAR LIVRO POR ID (PUT)
+PUT http://localhost:3000/livros/1
+Content-Type: application/json
+
+{
+  "titulo": "Introdução ao SQL (Edição Revisada)",
+  "autor": "Luke Code",
+  "preco": 54.90,
+  "estoque": 12
+}
+
+###
+
+### 5. DELETAR LIVRO POR ID (DELETE)
+DELETE http://localhost:3000/livros/3
 ```
 
 ---
