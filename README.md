@@ -179,13 +179,13 @@ O banco `livraria_db` com as tabelas de cliente, livro e pedido aparecerá na ba
 Na raiz do projeto, crie a estrutura de arquivos e diretórios abaixo:
 
 ```bash
-├── db.js                 (Arquivo de conexão com o banco)
+├── bd.js                 (Arquivo de conexão com o banco de dados)
 ├── rotas/
 │   ├── listarLivros.js   (GET)
 │   ├── cadastrarLivro.js (POST)
 │   ├── atualizarLivro.js (PUT)
-│   └── deletarLivro.js   (DELETE)
-└── server.js             (Arquivo principal que junta tudo)
+│   └── removerLivro.js   (DELETE)
+└── server.js             (Arquivo principal que agrupa tudo)
 ```
 
 ## Exercício
